@@ -18,6 +18,24 @@ html {
 
 body {
   margin: 0;
+  width: auto; 
+  height: auto;
+  /* fallback */
+  background-color:@start-color;
+  /* chrome 2+, safari 4+; multiple color stops */
+  background-image:-webkit-gradient(linear, left bottom, right top, color-stop(0.32, @start-color), color-stop(0.66, @stop-color), color-stop(0.83, #5c7c99));
+  /* chrome 10+, safari 5.1+ */
+  background-image:-webkit-linear-gradient(@degree, @start-color, @stop-color, #5c7c99);
+  /* firefox; multiple color stops */
+  background-image:-moz-linear-gradient(@degree, @start-color, @stop-color, #5c7c99);
+  /* ie10 */
+  background-image: -ms-linear-gradient(@degree, @start-color 0%, @stop-color 100%);
+  /* opera 11.1 */
+  background-image: -o-linear-gradient(@degree, @start-color, @stop-color);
+  /* The "standard" */
+  background-image: linear-gradient(@degree, @start-color, @stop-color);
+
+
 }
 
 // HTML5 display definitions

@@ -11,6 +11,22 @@ html {
 }
 body {
   margin: 0;
+  width: auto;
+  height: auto;
+  /* fallback */
+  background-color: #F2F2F2;
+  /* chrome 2+, safari 4+; multiple color stops */
+  background-image: -webkit-gradient(linear, left bottom, right top, color-stop(0.32, #F2F2F2), color-stop(0.66, #E8E4E3), color-stop(0.83, #5c7c99));
+  /* chrome 10+, safari 5.1+ */
+  background-image: -webkit-linear-gradient(45deg, #F2F2F2, #E8E4E3, #5c7c99);
+  /* firefox; multiple color stops */
+  background-image: -moz-linear-gradient(45deg, #F2F2F2, #E8E4E3, #5c7c99);
+  /* ie10 */
+  background-image: -ms-linear-gradient(45deg, #F2F2F2 0%, #E8E4E3 100%);
+  /* opera 11.1 */
+  background-image: -o-linear-gradient(45deg, #F2F2F2, #E8E4E3);
+  /* The "standard" */
+  background-image: linear-gradient(45deg, #F2F2F2, #E8E4E3);
 }
 article,
 aside,
